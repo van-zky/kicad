@@ -1,0 +1,171 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "test"
+Date "2019-07-01"
+Rev "a"
+Comp "BUAA"
+Comment1 "10kHz Square Wave Generator Using a 555 Timer"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Timer:NE555 U1
+U 1 1 5D19C5D3
+P 5200 3800
+F 0 "U1" H 5200 4381 50  0000 C CNN
+F 1 "NE555" H 5200 4290 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5200 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 5200 3800 50  0001 C CNN
+	1    5200 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D19F347
+P 3250 3800
+F 0 "R1" V 3043 3800 50  0000 C CNN
+F 1 "20.2k" V 3134 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3180 3800 50  0001 C CNN
+F 3 "~" H 3250 3800 50  0001 C CNN
+	1    3250 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D19FADD
+P 3250 4500
+F 0 "R2" H 3320 4546 50  0000 L CNN
+F 1 "47k" H 3320 4455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3180 4500 50  0001 C CNN
+F 3 "~" H 3250 4500 50  0001 C CNN
+	1    3250 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D1A01D7
+P 4500 4950
+F 0 "C1" H 4615 4996 50  0000 L CNN
+F 1 "1.5n" H 4615 4905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4538 4800 50  0001 C CNN
+F 3 "~" H 4500 4950 50  0001 C CNN
+	1    4500 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3600 4500 3600
+$Comp
+L Device:C C2
+U 1 1 5D1A0D9B
+P 3900 4950
+F 0 "C2" H 4015 4996 50  0000 L CNN
+F 1 "0.01u" H 4015 4905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3938 4800 50  0001 C CNN
+F 3 "~" H 3900 4950 50  0001 C CNN
+	1    3900 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3800 3900 3800
+Wire Wire Line
+	3900 3800 3900 4800
+Wire Wire Line
+	4500 4800 4500 4500
+Wire Wire Line
+	4700 4000 3250 4000
+Wire Wire Line
+	3250 4000 3250 4350
+Wire Wire Line
+	5700 3800 5950 3800
+Wire Wire Line
+	5950 3800 5950 4650
+Wire Wire Line
+	5950 4650 3250 4650
+Connection ~ 4500 3600
+Wire Wire Line
+	3400 3600 3400 3800
+Wire Wire Line
+	3400 3600 4500 3600
+Wire Wire Line
+	3100 3800 3100 3250
+Wire Wire Line
+	3100 3250 5950 3250
+Wire Wire Line
+	5950 3250 5950 3800
+Connection ~ 5950 3800
+Wire Wire Line
+	5700 4000 5700 4500
+Wire Wire Line
+	5700 4500 4500 4500
+Connection ~ 4500 4500
+Wire Wire Line
+	4500 4500 4500 3600
+Wire Wire Line
+	5200 4200 5200 5250
+Wire Wire Line
+	5200 5250 4500 5250
+Wire Wire Line
+	4500 5250 4500 5100
+Wire Wire Line
+	3900 5100 3900 5250
+Wire Wire Line
+	3900 5250 4500 5250
+Connection ~ 4500 5250
+$Comp
+L power:VCC #PWR0101
+U 1 1 5D1A8590
+P 1550 4150
+F 0 "#PWR0101" H 1550 4000 50  0001 C CNN
+F 1 "VCC" H 1567 4323 50  0000 C CNN
+F 2 "" H 1550 4150 50  0001 C CNN
+F 3 "" H 1550 4150 50  0001 C CNN
+	1    1550 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D1A993E
+P 2100 4300
+F 0 "#FLG0102" H 2100 4375 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 4473 50  0000 C CNN
+F 2 "" H 2100 4300 50  0001 C CNN
+F 3 "~" H 2100 4300 50  0001 C CNN
+	1    2100 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4150 1550 4500
+Text Label 2100 4350 0    50   ~ 0
+GND
+Text Label 1550 4300 0    50   ~ 0
+VCC
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5D1B2096
+P 1700 4850
+F 0 "J1" H 1808 5031 50  0000 C CNN
+F 1 "Power Supply" H 1808 4940 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Horizontal" H 1700 4850 50  0001 C CNN
+F 3 "~" H 1700 4850 50  0001 C CNN
+	1    1700 4850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5700 3600
+Wire Wire Line
+	1550 4500 1900 4500
+Wire Wire Line
+	1900 4500 1900 4850
+Wire Wire Line
+	2100 4950 1900 4950
+Wire Wire Line
+	2100 4300 2100 4950
+Text Label 5200 3400 0    50   ~ 0
+VCC
+Text Label 5200 4200 0    50   ~ 0
+GND
+$EndSCHEMATC
