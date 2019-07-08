@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\Users\风之子zky\Desktop\全国电赛\kicad\test\test.sch</source>
-    <date>2019/7/1 17:53:21</date>
+    <date>2019/7/6 21:07:31</date>
     <tool>Eeschema (5.1.2)-2</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -21,23 +21,23 @@
   <components>
     <comp ref="U1">
       <value>NE555</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/ne555.pdf</datasheet>
       <libsource lib="Timer" part="NE555" description="Precision Timers, DIP-8/SOIC-8"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D19C5D3</tstamp>
     </comp>
     <comp ref="R1">
-      <value>47k</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <value>20.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5D19F347</tstamp>
     </comp>
     <comp ref="R2">
-      <value>20.2</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <value>47k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -61,7 +61,7 @@
     </comp>
     <comp ref="J1">
       <value>Power Supply</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
